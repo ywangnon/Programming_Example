@@ -14,7 +14,11 @@ class ViewController: UIViewController {
     var createWebView: WKWebView?
     
     override func loadView() {
+        let contentController = WKUserContentController()
+        // 자바스크립트로 읽어들일 함수 이름을 미리 알려준다.
+        contentController.add(self, name: "함수 이름")
         let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.userContentController = contentController
         self.webView = WKWebView(frame: .zero, configuration: webConfiguration)
         self.webView.uiDelegate = self
         self.webView.navigationDelegate = self
@@ -35,25 +39,6 @@ class ViewController: UIViewController {
 
 extension ViewController: WKUIDelegate {
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-//        if navigationAction.targetFrame == nil {
-//            let tempURL = navigationAction.request.url
-//            var components = URLComponents()
-//            components.scheme = tempURL?.scheme
-//            components.host = tempURL?.host
-//            components.path = (tempURL?.path)!
-//
-//            if components.url?.absoluteString == "http://117.52.170.157:8080/addr_ios" {
-//                let webViewTemp = WKWebView(frame: self.view.bounds, configuration: configuration)
-//                webViewTemp.uiDelegate = self
-//                webViewTemp.navigationDelegate = self
-//                self.view.addSubview(webViewTemp)
-//                return webViewTemp
-//            } else {
-//                self.webView.load(navigationAction.request)
-//            }
-//        }
-//        return nil
-        
         let frame = UIScreen.main.bounds
         
         createWebView = WKWebView(frame: frame, configuration: configuration)
@@ -124,4 +109,19 @@ extension ViewController: WKUIDelegate {
 
 extension ViewController: WKNavigationDelegate {
     
+}
+
+extension ViewController: WKScriptMessageHandler {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("\n---------- [ 메세지 ] ----------\n")
+        // 함수의 이름을 확인하고, 넘어온 값을 파싱해준다.
+        // 다양한 함수를 미리 설정했을 경우, else if 로 나눠서 설정해준다.
+        if message.name == "함수 이름" {
+            if let dictionary = message.body as? Dictionary<String, AnyObject> {
+                print(dictionary)
+            } else {
+                print(message.body)
+            }
+        }
+    }
 }
