@@ -17,8 +17,10 @@ class ViewController: UIViewController {
         let contentController = WKUserContentController()
         // 자바스크립트로 읽어들일 함수 이름을 미리 알려준다.
         contentController.add(self, name: "함수 이름")
+        
         let webConfiguration = WKWebViewConfiguration()
         webConfiguration.userContentController = contentController
+        
         self.webView = WKWebView(frame: .zero, configuration: webConfiguration)
         self.webView.uiDelegate = self
         self.webView.navigationDelegate = self
@@ -38,25 +40,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: WKUIDelegate {
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        let frame = UIScreen.main.bounds
-        
-        createWebView = WKWebView(frame: frame, configuration: configuration)
-        
-        createWebView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        createWebView?.navigationDelegate = self
-        createWebView?.uiDelegate = self
-        
-        view.addSubview(createWebView!)
-        
-        return createWebView
-    }
-    
-    func webViewDidClose(_ webView: WKWebView) {
-        
-    }
-    
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo,
                  completionHandler: @escaping () -> Void) {
         let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
