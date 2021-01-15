@@ -36,3 +36,7 @@ struct SortModel {
     var king: Bool
     var name: String
 }
+
+print("\n---------- [ struct ] ----------\n")
+let decodedStruct = String(data: <#T##Data#>, encoding: .utf8)!
+print(decodedStruct)
