@@ -7,5 +7,5 @@
 
 import Foundation
 
-let sampleArray = ["위에서부터 쌓기"]
-let sampleControllerArray = ["UpToDownViewController"]
+let sampleArray = ["위에서부터 쌓기", "글자수 제한"]
+let sampleControllerArray = ["UpToDown", "LimitCharacter"]

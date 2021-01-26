@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014A541425BFAABC004A3261 /* LimitCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A541325BFAABC004A3261 /* LimitCharacterViewController.swift */; };
+		014A541725BFAAD4004A3261 /* LimitCharacter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014A541625BFAAD4004A3261 /* LimitCharacter.storyboard */; };
 		01D9AF0025B1E347003535BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9AEFF25B1E347003535BC /* AppDelegate.swift */; };
 		01D9AF0225B1E347003535BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9AF0125B1E347003535BC /* SceneDelegate.swift */; };
 		01D9AF0425B1E347003535BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9AF0325B1E347003535BC /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014A541325BFAABC004A3261 /* LimitCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacterViewController.swift; sourceTree = "<group>"; };
+		014A541625BFAAD4004A3261 /* LimitCharacter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LimitCharacter.storyboard; sourceTree = "<group>"; };
 		01D9AEFC25B1E347003535BC /* UITextViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITextViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D9AEFF25B1E347003535BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01D9AF0125B1E347003535BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014A541225BFAA95004A3261 /* 글자수 제한 */ = {
+			isa = PBXGroup;
+			children = (
+				014A541325BFAABC004A3261 /* LimitCharacterViewController.swift */,
+				014A541625BFAAD4004A3261 /* LimitCharacter.storyboard */,
+			);
+			name = "글자수 제한";
+			path = "글자수 제한";
+			sourceTree = "<group>";
+		};
 		01D9AEF325B1E347003535BC = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +93,7 @@
 			children = (
 				01D9AF1425B1E852003535BC /* SampleArray.swift */,
 				01D9AF1F25B1EBE3003535BC /* 위에서부터 쌓기 */,
+				014A541225BFAA95004A3261 /* 글자수 제한 */,
 			);
 			name = "샘플 목록";
 			path = "샘플 목로";
@@ -155,6 +170,7 @@
 				01D9AF0925B1E348003535BC /* Assets.xcassets in Resources */,
 				01D9AF1A25B1EBBB003535BC /* UpToDown.storyboard in Resources */,
 				01D9AF0725B1E347003535BC /* Main.storyboard in Resources */,
+				014A541725BFAAD4004A3261 /* LimitCharacter.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +183,7 @@
 			files = (
 				01D9AF0425B1E347003535BC /* ViewController.swift in Sources */,
 				01D9AF1525B1E852003535BC /* SampleArray.swift in Sources */,
+				014A541425BFAABC004A3261 /* LimitCharacterViewController.swift in Sources */,
 				01D9AF0025B1E347003535BC /* AppDelegate.swift in Sources */,
 				01D9AF0225B1E347003535BC /* SceneDelegate.swift in Sources */,
 				01D9AF1D25B1EBE0003535BC /* UpToDownViewController.swift in Sources */,

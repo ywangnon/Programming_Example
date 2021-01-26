@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UILabel Sample-->
+        <!--UITextView Sample-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UILabelSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UITextViewSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,10 @@
                             <constraint firstItem="1Og-h2-rr4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lRN-Pz-aAV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="UILabel Sample" id="jNG-fP-ejm"/>
+                    <navigationItem key="navigationItem" title="UITextView Sample" id="jNG-fP-ejm"/>
+                    <connections>
+                        <outlet property="sampleTableView" destination="1Og-h2-rr4" id="Caq-BL-9lY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
