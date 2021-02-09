@@ -13,7 +13,8 @@ class LimitCharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        print("\u{12593}\u{12623}")
+        print(String(utf16CodeUnits: [12593,12623], count: 2))
     }
     
 }
@@ -30,6 +31,11 @@ extension LimitCharacterViewController: UITextViewDelegate {
 //        let updatedText = currentText.replacingCharacters(in: stringRange, with: text)
 //
 //        return updatedText.count <= 16
+        print("\n---------- [ new string ] ----------\n")
+        for scalar in textView.text.utf16 {
+            print(scalar)
+        }
+        
         let newLength = textView.text.count + text.count - range.length
         
         return !(newLength > 10)
