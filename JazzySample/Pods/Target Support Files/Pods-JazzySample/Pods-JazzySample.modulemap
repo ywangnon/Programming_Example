@@ -1,0 +1,6 @@
+framework module Pods_JazzySample {
+  umbrella header "Pods-JazzySample-umbrella.h"
+
+  export *
+  module * { export * }
+}
