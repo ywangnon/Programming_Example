@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -88,7 +88,6 @@
 				A49C485CF3739F62177821AC /* Pods-JazzySample.debug.xcconfig */,
 				A6F742AD9A20382D17F2050E /* Pods-JazzySample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -354,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A49C485CF3739F62177821AC /* Pods-JazzySample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A6F742AD9A20382D17F2050E /* Pods-JazzySample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

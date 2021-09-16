@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMO-T5-cmL">
+                                <rect key="frame" x="50" y="94" width="314" height="718"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXY-fk-YV8">
+                                        <rect key="frame" x="50" y="50" width="214" height="618"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FXY-fk-YV8" secondAttribute="trailing" constant="50" id="FOu-6b-IbM"/>
+                                    <constraint firstAttribute="bottom" secondItem="FXY-fk-YV8" secondAttribute="bottom" constant="50" id="JPc-se-lfI"/>
+                                    <constraint firstItem="FXY-fk-YV8" firstAttribute="leading" secondItem="VMO-T5-cmL" secondAttribute="leading" constant="50" id="QK0-Lt-bvr"/>
+                                    <constraint firstItem="FXY-fk-YV8" firstAttribute="top" secondItem="VMO-T5-cmL" secondAttribute="top" constant="50" id="swc-Bq-bjA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VMO-T5-cmL" secondAttribute="trailing" constant="50" id="109-a0-Q7D"/>
+                            <constraint firstItem="VMO-T5-cmL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="f2c-Ft-fIH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VMO-T5-cmL" secondAttribute="bottom" constant="50" id="fwZ-bV-u73"/>
+                            <constraint firstItem="VMO-T5-cmL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="iC2-dQ-1gX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="innerView" destination="FXY-fk-YV8" id="szT-HZ-kkP"/>
+                        <outlet property="outerView" destination="VMO-T5-cmL" id="ZLd-9d-avu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
